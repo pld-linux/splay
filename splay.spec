@@ -6,6 +6,7 @@ Release:	1
 License:	LGPL (library), GPL (application)
 Group:		Applications/Sound
 Source0:	http://splay.sourceforge.net/tgz/%{name}-%{version}.tar.gz
+# Source0-md5:	91cf15bdf0d0c4eb94306c3a8d8b94cc
 Patch0:		%{name}-fix.patch
 Patch1:		%{name}-qt3.patch
 Patch2:		%{name}-id3lib.patch
