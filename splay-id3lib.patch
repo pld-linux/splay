@@ -1,0 +1,44 @@
+--- splay-0.9.5.2/apps/splay.cc.orig	2001-03-19 09:51:27.000000000 +0100
++++ splay-0.9.5.2/apps/splay.cc	2003-04-19 20:50:03.000000000 +0200
+@@ -177,17 +177,10 @@
+     {
+       //    cerr << getpid() << endl;
+ #ifdef HAVE_LIBID3
+-      try {
+ 	const ID3_Tag*  mytag = new ID3_Tag(filename);
+-	if ( mytag->HasV1Tag() || mytag->HasV2Tag()  )
++	if ( mytag && (mytag->HasV1Tag() || mytag->HasV2Tag())  )
+ 	  cout << mytag << endl;
+ 	delete mytag;
+-	
+-      }
+-      catch(ID3_Error &err){
+-	cout << err.GetErrorFile() << " (" << err.GetErrorLine() << "): "
+-	     << err.GetErrorType() << ": " << err.GetErrorDesc() << endl;
+-      }
+ #endif /* HAVE_LIBID3 */        
+     }
+   
+--- splay-0.9.5.2/apps/xsplay.cc.orig	2001-02-20 20:04:07.000000000 +0100
++++ splay-0.9.5.2/apps/xsplay.cc	2003-04-19 20:51:01.000000000 +0200
+@@ -204,18 +204,14 @@
+   if(threadflag)server->makethreadedplayer(splay_threadnum);
+ 
+ #ifdef HAVE_LIBID3
+-      try {
++      {
+ 	const ID3_Tag*  mytag = new ID3_Tag(filename);
+-	if ( mytag->HasV1Tag() || mytag->HasV2Tag()  ) {
++	if ( mytag && (mytag->HasV1Tag() || mytag->HasV2Tag())  ) {
+ 	  Setsongname(nn(ID3_GetTitle(mytag)));
+ 	  Setsongmusican(nn(ID3_GetArtist(mytag)));
+ 	  delete mytag;
+ 	}
+       }
+-      catch(ID3_Error &err){
+-	cout << err.GetErrorFile() << " (" << err.GetErrorLine() << "): "
+-	     << err.GetErrorType() << ": " << err.GetErrorDesc() << endl;
+-      }
+ #endif /* HAVE_LIBID3 */
+ 
+   music.quit=music.pause=

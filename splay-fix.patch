@@ -1,0 +1,10 @@
+--- splay-0.9.5.2/apps/functions.cc.orig	2001-02-15 14:43:39.000000000 +0100
++++ splay-0.9.5.2/apps/functions.cc	2003-04-19 00:36:54.000000000 +0200
+@@ -10,6 +10,7 @@
+ #endif
+ 
+ #include <stdio.h>
++#include <string.h>
+ 
+ #include "xsplay.h"
+ 
