@@ -29,7 +29,7 @@ Summary:	Qt-based X interface for splay
 Summary(pl):	Oparty o Qt interfejs pod X do programu splay
 Group:		X11/Applications/Sound
 # only because xsplay(1) manual is just reference to splay(1)
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description xsplay
 Qt-based X interface for splay.
