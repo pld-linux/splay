@@ -1,5 +1,5 @@
 Summary:	MPEG-1,2 Audio layer 1,2,3 file player
-Summary(pl.UTF-8):   Odtwarzacz plików dźwiękowych MPEG-1,2 warstw 1,2,3
+Summary(pl.UTF-8):	Odtwarzacz plików dźwiękowych MPEG-1,2 warstw 1,2,3
 Name:		splay
 Version:	0.9.5.2
 Release:	1
@@ -26,7 +26,7 @@ Odtwarzacz plików dźwiękowych MPEG-1,2 warstw 1,2,3.
 
 %package xsplay
 Summary:	Qt-based X interface for splay
-Summary(pl.UTF-8):   Oparty o Qt interfejs pod X do programu splay
+Summary(pl.UTF-8):	Oparty o Qt interfejs pod X do programu splay
 Group:		X11/Applications/Sound
 # only because xsplay(1) manual is just reference to splay(1)
 Requires:	%{name} = %{version}-%{release}
